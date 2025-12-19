@@ -1,0 +1,10 @@
+langgraph
+langchain-google-genai
+langchain-community
+yfinance
+tavily-python
+python-dotenv
+pandas
+requests
+lxml
+ipython
