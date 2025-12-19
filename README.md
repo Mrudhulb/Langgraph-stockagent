@@ -63,6 +63,26 @@ python app.py
 3.  **Analysis**: You will see logs from multiple "Analyst" nodes running in parallel.
 4.  **Report**: A final "Publisher" block will print a consolidated report to the console.
 
+## 🧪 Testing & Debugging
+
+This repository includes two helper scripts to test specific components in isolation:
+
+### My Search Isn't Working?
+Run `debug_search.py` to verify your Tavily API key and internet connection:
+```bash
+python debug_search.py
+```
+*   **What it does**: Performs a simple search query ("Why is PSNY stock moving today?") and prints the raw JSON result.
+*   **Use when**: The agent complains about "No results found" or API errors.
+
+### The Screener Is Empty?
+Run `test_screener.py` to verify the Yahoo Finance scraper:
+```bash
+python test_screener.py
+```
+*   **What it does**: Fetches the "Top Gainers" list from Yahoo Finance and prints the top 5 tickers found.
+*   **Use when**: The main app falls back to default stocks (NVDA/TSLA) unexpectedly.
+
 ## 🧩 Project Structure
 
 - `app.py`: Main application logic containing the graph definition and node functions.
